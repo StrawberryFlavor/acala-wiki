@@ -346,7 +346,7 @@ Account ID:       0x0a11c9bcc81f8bd314e80bc51cbfacf30eaeb57e863196a79cccdc8bf475
 SS58 Address:     5CHucvTwrPg8L2tjneVoemApqXcUaEdUDsCEPyE7aDwrtR8D
 ```
 
-Now see the `ed25519` key and address associated with the same mnemonic. This key will be used by GRANDPA for block finalization.
+Now see the `ed25519` key and address associated with the same mnemonic. This key will be used by grandpa for block finalization.
 
 ```shell
 subkey inspect-key --scheme ed25519 "infant salmon buzz patrol maple subject turtle cute legend song vital leisure" 
@@ -369,7 +369,7 @@ On the "Accounts" tab, click "Add account". You do not need to provide a name, a
 
 Generate an `sr25519` key which will be used by Aura for block production. Take careful note of the menmonic phrase, and the SS58 address which can be copied by clicking on the identicon in the top left.
 
-Then generate an `ed25519` key which will be used by GRANDPA for block finalization. Again, note the menmonic phrase and ss58 address.
+Then generate an `ed25519` key which will be used by grandpa for block finalization. Again, note the menmonic phrase and ss58 address.
 
 
 
@@ -491,7 +491,9 @@ You can use the Apps UI to insert your keys into the keystore. Navigate to the "
 ![image.png](https://i.loli.net/2020/11/24/qzwYn45Q7gvf3et.png)
 
 ```
-keytype: aura suri: <your mnemonic phrase> 
+keytype: babe 
+
+suri: <your mnemonic phrase> 
 (eg. infant salmon buzz patrol maple subject turtle cute legend song vital leisure) 
 
 publicKey: <your raw sr25519 key> (eg.0x0a11c9bcc81f8bd314e80bc51cbfacf30eaeb57e863196a79cccdc8bf4750d21)
@@ -499,12 +501,14 @@ publicKey: <your raw sr25519 key> (eg.0x0a11c9bcc81f8bd314e80bc51cbfacf30eaeb57e
 
 If you generated your keys with the Apps UI you will not know your raw public key. In this case you may use your SS58 address (`5CHucvTwrPg8L2tjneVoemApqXcUaEdUDsCEPyE7aDwrtR8D`) instead.
 
-You've now successfully inserted your babe key. You can repeat those steps to insert your GRANDPA key (the **ed25519** key)
+You've now successfully inserted your babe key. You can repeat those steps to insert your grandpa key (the **ed25519** key)
 
 ![image.png](https://i.loli.net/2020/11/24/pV1BhnRTmL6b7es.png)
 
 ```
-keytype: gran suri: <your mnemonic phrase> 
+keytype: grandpa 
+
+suri: <your mnemonic phrase> 
 (eg. infant salmon buzz patrol maple subject turtle cute legend song vital leisure) 
 
 publicKey: <your raw ed25519 key> (eg.0x1a0e2bf1e0195a1f5396c5fd209a620a48fe90f6f336d89c89405a0183a857a3)
