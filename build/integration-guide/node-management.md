@@ -146,7 +146,7 @@ docker run -p 9944:9944 acala/acala-node:0.6.2 --name "calling_home_from_a_docke
 
 **Selecting a chain**
 
-Use the `--chain <chainspec>` option to select the chain. Can be `mandala` or a custom chain spec. By default, the client will start Polkadot.
+Use the `--chain <chainspec>` option to select the chain. Can be `mandala` or a custom chain spec. By default, the client will start Acala.
 
 **Archive node**
 
@@ -484,7 +484,7 @@ Here are some differences from when we launched as Alice.
 
 Once your node is running, you will again notice that no blocks are being produced. At this point, you need to add your keys into the keystore. Remember you will need to complete these steps for each node in your network. You will add two types of keys for each node: babe and grandpa keys. babe keys are necessary for block production; grandpa keys are necessary for block finalization.
 
-###### Option 1: Use the Polkadot-JS Apps UI
+###### Option 1: Use the Acala-JS Apps UI
 
 You can use the Apps UI to insert your keys into the keystore. Navigate to the "Toolbox" tab and the "RPC Call" sub-tab. Choose "author" and "insertKey". The fields can be filled like this:
 
